@@ -4,12 +4,19 @@ import 'dotenv/config'
 import usersRouter from './routes/usersRouter.js'
 
 const app = express()
+const PORT = process.env.PORT
+
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 app.use('/api', usersRouter)
 
-  connectDB();
+app.get('/', (req,res) => {
+    res.end('Test')
+})
 
+connectDB();
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("server is running on port 3000")
 })
