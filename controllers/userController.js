@@ -2,7 +2,7 @@ import User from '../models/user.js'
 
 export const getAllUsers = async (req,res) => {
     try{
-        const users = await User.find()
+        const users = await User.find().select('-password')
         if(!users.length < 1){
             return res.status(400).json({message: 'Users not found'})
         }
