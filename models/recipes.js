@@ -17,7 +17,7 @@ const recipesSchema = new Schema({
     ingredients : [{type : String}],
     steps : [{type : String}],
     author : {
-        type : Schema.types.ObjectId, ref : 'User'
+        type : Schema.Types.ObjectId, ref : 'User'
     },
 })
 
