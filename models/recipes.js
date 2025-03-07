@@ -8,7 +8,7 @@ const recipesSchema = new Schema({
     category : {
         type : String
     },
-    pays : {
+    country : {
         type : String
     },
     description : {
