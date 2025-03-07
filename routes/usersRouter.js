@@ -1,6 +1,6 @@
 import {Router} from 'express'
 import { getAllUsers, createUser, getUserByID, updateUser, deleteUser } from '../controllers/userController.js'
-import { VerifyUserFields } from '../controllers/middlewares/verifyUserCreation.js'
+import { VerifyUserFields } from '../middlewares/verifyUserCreation.js'
 
 const usersRouter = Router()
 
