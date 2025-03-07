@@ -7,8 +7,6 @@ const usersRouter = Router()
 usersRouter.get('/users', getAllUsers)
 usersRouter.get('/users/:id', getUserByID)
 
-usersRouter.post('/users', VerifyUserFields, createUser)
-
 usersRouter.put('/users/:id', updateUser)
 
 usersRouter.delete('/users/:id', deleteUser)
